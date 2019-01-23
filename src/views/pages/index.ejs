@@ -11,5 +11,20 @@
 
         <% include ../partials/_filterable-content %>
 
+	<div>
+		<ul>
+		  <% for(var i=0; i<media.length; i++) {%>
+		  <li class="quote">
+		    <div><b>TITLE:</b> <%= media[i].title %></div>
+		    <div><b>YEAR:</b> <%= media[i].year %></div>
+		    <div><b>POSTER:</b> <%= media[i].poster %></div>
+		    <div><b>GENDER:</b> <%= media[i].gender %></div>
+		    <div><b>TYPE:</b> <%= media[i].type %></div>
+		  </li>
+		  <hr>
+		 <% } %>
+		</ul>
+	</div>
+
     </body>
 </html>
