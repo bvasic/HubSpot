@@ -11,6 +11,8 @@ Technologies that I will be using in the project are as following:
 
 Application link: http://vps621397.ovh.net
 
+2. Front-end and backend technoologies:
+
 ## Given more time, what would you have done differently?
 
 _your answer here_
