@@ -2,38 +2,52 @@
 <html>
     <head>
         <% include ../partials/_fonts %>
-        <link rel="stylesheet" type="text/css" href="./bundle/css/global.css" />
+        <base href="/">
+        <link rel="stylesheet" type="text/css" href="../css/global.css" />
     </head>
     <body>
-    	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
-    	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
-    	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
-    	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
-    	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
-    	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
-    	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
-    	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
-    	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
-        <% include ../partials/_testimonial %>
+    	<div class="contentHolder">
+	    	<div class="header">
+	    		<% include ../partials/_header %>
+	    	</div>
+	    	<div class="moviesList">
+	    		<p>MOVIES AND THUMBNAILS</p><br>
+	    		<p>MOVIES AND THUMBNAILS</p><br>
+	    		<p>MOVIES AND THUMBNAILS</p><br>
+	    		<p>MOVIES AND THUMBNAILS</p><br>
+	    	</div>
+	    	
+	    	<div class="header">
+		    	<% include ../partials/_testimonial %>
+		    </div>
+	        <div class="testimonialBlock">
+				<div>
+					<div>
+						<p>Polaroid bushwich microdosing tattooed. Cornhold single coffee bicycle rights lumbersexual, pour-over
+							intelligents ethical selfies schlitz raw denim 90's leggings. Art party fap lumbersexual mustache actually tilde
+							disrupt kinfolk goth +1.</p>
+						<span>Indiana Jones, Archaeologist</span>
+					</div>
+					<a>Tell Me More</a>
+				</div>
+			</div>
 
-        <% include ../partials/_cta %>
+	        <% include ../partials/_cta %>
 
-        <% include ../partials/_filterable-content %>
+	        <% include ../partials/_filterable-content %>
 
-	<div>
-		<ul>
-		  <% for(var i=0; i < data.length; i++) { %>
-		  <li class="quote">
-		    <div><b>TITLE:</b> <%= data[i].title %></div>
-		    <div><b>YEAR:</b> <%= data[i].year %></div>
-		    <div><b>POSTER:</b> <%= data[i].poster %></div>
-		    <div><b>GENDER:</b> <%= data[i].gender %></div>
-		    <div><b>TYPE:</b> <%= data[i].type %></div>
-		  </li>
-		  <hr>
-		 <% } %>
-		</ul>
-	</div>
-
+			<ul>
+			  <% for(var i=0; i < data.length; i++) { %>
+			  <li class="quote">
+			    <div><b>TITLE:</b> <%= data[i].title %></div>
+			    <div><b>YEAR:</b> <%= data[i].year %></div>
+			    <div><b>POSTER:</b> <%= data[i].poster %></div>
+			    <div><b>GENDER:</b> <%= data[i].gender %></div>
+			    <div><b>TYPE:</b> <%= data[i].type %></div>
+			  </li>
+			  <hr>
+			 <% } %>
+			</ul>
+		</div>
     </body>
 </html>

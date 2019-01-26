@@ -12,10 +12,14 @@ var content = fs.readFileSync("./data/data.json");
 // Define to JSON type
 var jsonContent = JSON.parse(content);
 
-server.use(bodyParser.urlencoded({extended: true}))
+server.use(bodyParser.urlencoded({extended: true}));
 server.use(express.static(__dirname+'/../views/'));
-server.use(express.static(__dirname+'/../bundle/css/'));
+server.use(express.static(__dirname+'/../../src/bundle/'));
+server.use(express.static(path.join(__dirname, 'src')));
+server.use(express.static(path.join(__dirname, 'src/bundle/css')))
 server.set('view engine', 'ejs');
+
+server.use(express.static(path.resolve('/../bundle/')));
 
 
 server.listen(port, function(){
@@ -24,6 +28,7 @@ server.listen(port, function(){
 
 //MAIN GET REQUEST
 server.get('/', (req, res)=>{
+	console.log("Server running on port "+port);
 	console.log("get request sent");
 	//res.render('index');
 	res.render(__dirname+'/../views/pages/index.ejs',{data : jsonContent});

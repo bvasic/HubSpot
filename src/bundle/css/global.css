@@ -1,3 +1,36 @@
 /* Bojan Vasic for Hubspot 23.01.2019 */
 body {
-  background: red; }
+  background: #ffffff;
+  margin: 0;
+  font-family: Verdana; }
+
+.contentHolder {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px; }
+  .contentHolder .header {
+    background: #00A2E0;
+    border-top: 2px solid #434343;
+    border-bottom: 2px solid #434343; }
+    .contentHolder .header .headerTitle {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 15px 0;
+      width: 1024px;
+      display: block;
+      color: #ffffff;
+      vertical-align: center;
+      font-weight: bold;
+      font-size: 18px; }
+      .contentHolder .header .headerTitle .centeredTitle {
+        height: 25px; }
+  .contentHolder .moviesList {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 0;
+    width: 1024px; }
+  .contentHolder .testimonialBlock {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 0;
+    width: 1024px; }
