@@ -15,7 +15,7 @@ var jsonContent = JSON.parse(content);
 
 server.use(express.static(path.resolve('./bundle')));
 server.set('view engine', 'ejs');
-server.set('views', path.join(__dirname, 'views'));
+server.set('views', path.join(__dirname, '../../views/pages/'));
 
 server.use(bodyParser.urlencoded({extended: true}))
 
@@ -25,9 +25,7 @@ server.listen(port, function(){
 
 //MAIN GET REQUEST
 server.get('/', (req, res) => {
-   res.send('Hello World!') ;
- //  content.find().toArray(function(err, results) {
- //  		res.render('index.ejs', {media: results});
-	// });
+  	res.send(jsonContent);
+  	//res.render('index.ejs',{media : jsonContent});
   // render EJS template populated with data from data.json
 });
