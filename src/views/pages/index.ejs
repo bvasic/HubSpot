@@ -2,7 +2,7 @@
 <html>
     <head>
         <% include ../partials/_fonts %>
-        <link rel="stylesheet" href="../../bundle/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./bundle/css/global.css" />
     </head>
     <body>
     	<b>TEST!!!!!!!!!!!!!!!!!!!!!!!<br></b>
@@ -22,13 +22,13 @@
 
 	<div>
 		<ul>
-		  <%= for(var i=0; i < media.length; i++) { %>
+		  <% for(var i=0; i < data.length; i++) { %>
 		  <li class="quote">
-		    <div><b>TITLE:</b> <%= media[i].title %></div>
-		    <div><b>YEAR:</b> <%= media[i].year %></div>
-		    <div><b>POSTER:</b> <%= media[i].poster %></div>
-		    <div><b>GENDER:</b> <%= media[i].gender %></div>
-		    <div><b>TYPE:</b> <%= media[i].type %></div>
+		    <div><b>TITLE:</b> <%= data[i].title %></div>
+		    <div><b>YEAR:</b> <%= data[i].year %></div>
+		    <div><b>POSTER:</b> <%= data[i].poster %></div>
+		    <div><b>GENDER:</b> <%= data[i].gender %></div>
+		    <div><b>TYPE:</b> <%= data[i].type %></div>
 		  </li>
 		  <hr>
 		 <% } %>

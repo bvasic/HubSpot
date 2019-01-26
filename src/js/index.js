@@ -13,12 +13,10 @@ var content = fs.readFileSync("./data/data.json");
 var jsonContent = JSON.parse(content);
 
 server.use(bodyParser.urlencoded({extended: true}))
-server.use(express.static(__dirname+'./../views/'));
-server.use(express.static(path.resolve('./src/')));
-server.use(express.static(path.join('/')));
-
-server.set('views',path.join(__dirname+'./../views/pages'));
+server.use(express.static(__dirname+'/../views/'));
+server.use(express.static(__dirname+'/../bundle/css/'));
 server.set('view engine', 'ejs');
+
 
 server.listen(port, function(){
     console.log("Server running on port "+port);
@@ -26,8 +24,9 @@ server.listen(port, function(){
 
 //MAIN GET REQUEST
 server.get('/', (req, res)=>{
+	console.log("get request sent");
 	//res.render('index');
-	res.render(__dirname+'/../views/pages/index.ejs',{media : jsonContent});
+	res.render(__dirname+'/../views/pages/index.ejs',{data : jsonContent});
   	//res.send(jsonContent);
   	//res.render('index.ejs',{media : jsonContent});
   	//render EJS template populated with data from data.json
