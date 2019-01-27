@@ -4,7 +4,10 @@ $headerBorders: #434343;
 body{
 	background: #ffffff;
 	margin: 0;
-	font-family: Verdana;
+	font-family: Montserrat;
+	ul {
+		list-style-type: none;
+	}
 }
 
 .contentHolder {
@@ -29,12 +32,46 @@ body{
 							height:25px;
 						}
 				}
+			}
+		.footer {
+			background:#00A2E0;
+			border-top:2px solid $headerBorders;
+			border-bottom:2px solid $headerBorders;
+				.headerTitle{
+					margin-left:auto;
+					margin-right: auto;
+					padding:15px 0;
+					width:1024px;
+					display: block;
+					color: #ffffff;
+					vertical-align: center;
+					font-weight: bold;
+					font-size:18px;
+						.centeredTitle{
+							height:25px;
+						}
+				}
 	}
-	.moviesList{
+	.moviesContainer{
 	    margin-left: auto;
 	    margin-right: auto;
 	    padding: 15px 0;
 	    width: 1024px;
+	    .movieContainer{
+	    	display: inline-block;
+	    	max-width: 30%;
+	    	padding: 5px;
+	    	vertical-align: top;
+	    	z-index: 1;
+	    	position: relative;
+	    	.movieImage {
+	    		width: 100%;
+	    		.imgResponsive{
+	    			width: 300px;
+    				height: auto;
+	    		}
+	    	}
+	    }
 	}
 	.testimonialBlock{
 	    margin-left: auto;
@@ -42,5 +79,20 @@ body{
 	    padding: 15px 0;
 	    width: 1024px;
 	}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    display: inline-block;
+    padding: 5px;
+    max-width: 31%;
 }
 

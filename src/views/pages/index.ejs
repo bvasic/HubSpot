@@ -3,36 +3,32 @@
     <head>
         <% include ../partials/_fonts %>
         <base href="/">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/global.css" />
+
     </head>
     <body>
     	<div class="contentHolder">
 	    	<div class="header">
 	    		<% include ../partials/_header %>
 	    	</div>
-	    	Between here
-	    	<ul>
-
-			  <% for(var i=0; i < content.media.length; i++) { %>
-			  <li class="quote">
-			    <div><b>TITLE:</b> <%= content.media[i].title %></div>
-			    <div><b>YEAR:</b> <%= content.media[i].year %></div>
-			    <div><b>POSTER:</b> <%= content.media[i].poster %></div>
-			    <div><b>GENDER:</b> <%= content.media[i].gender %></div>
-			    <div><b>TYPE:</b> <%= content.media[i].type %></div>
-			  </li>
-			  <hr>
-			 <% } %>
-			</ul>
-and here
+	    	
 	    	<div class="moviesList">
-	    		<p>MOVIES AND THUMBNAILS</p><br>
-	    		<p>MOVIES AND THUMBNAILS</p><br>
-	    		<p>MOVIES AND THUMBNAILS</p><br>
-	    		<p>MOVIES AND THUMBNAILS</p><br>
+		    	<div class="moviesContainer">
+					  <% for(var i=0; i < content.media.length; i++) {  %>
+						  <div class="movieContainer">
+						    <img src="<%= content.media[i].poster %>" alt="Snow" style="width:100%">
+						    <div><%= content.media[i].title + " (" + content.media[i].year + " )" %></div>
+					    	<div><b>Genres:</b> <%= content.media[i].genre %></div>
+					    	<div><b>TYPE(used for filtering):</b> <%= content.media[i].type %></div>
+						  </div>
+					 <% } %>
+		    	</div>
 	    	</div>
 	    	
-	    	<div class="header">
+	    	<div class="footer">
 		    	<% include ../partials/_testimonial %>
 		    </div>
 	        <div class="testimonialBlock">
@@ -50,7 +46,6 @@ and here
 	        <% include ../partials/_cta %>
 
 	        <% include ../partials/_filterable-content %>
-BOJAAAAN
 			
 		</div>
     </body>
