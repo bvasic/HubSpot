@@ -40,20 +40,38 @@ server.listen(port, function(){
 //         res.json(content);
 //     });    
 // });
+
+// server.post("/",function(req,res){
+//         var jsonRequest = req.body;
+//         jsonfile.writeFile(file,JSON.stringify(jsonRequest));
+// });
+
 //MAIN GET REQUEST
 server.get('/',function(req,res){
 	console.log("get request sent");
-	var testing = jsonfile.readFile(file, function read(err, data) {
+	jsonfile.readFile(file, function read(err, data) {
         if (err) {
             throw err;
         }
+        //var content = JSON.parse(data);
         var content = data;
-        res.json(content);
-    });  
-    var bla = JSON.stringify(testing);
+        //res.json(content);
+        res.render(__dirname+'/../views/pages/index.ejs',{ content: content });
+    }); 
 
-	//res.render('index');
-	res.render(__dirname+'/../views/pages/index.ejs',bla);
+
+
+	// var testing = jsonfile.readFile(file, function read(err, data) {
+ //        if (err) {
+ //            throw err;
+ //        }
+ //        var content = data;
+ //        res.json(content);
+ //    });  
+ //    var bla = JSON.stringify(testing);
+
+	// //res.render('index');
+	// res.render(__dirname+'/../views/pages/index.ejs',bla);
   	//res.send(jsonContent);
   	//res.render('index.ejs',{media : jsonContent});
   	//render EJS template populated with data from data.json

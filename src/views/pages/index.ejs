@@ -10,6 +10,21 @@
 	    	<div class="header">
 	    		<% include ../partials/_header %>
 	    	</div>
+	    	Between here
+	    	<ul>
+
+			  <% for(var i=0; i < content.media.length; i++) { %>
+			  <li class="quote">
+			    <div><b>TITLE:</b> <%= content.media[i].title %></div>
+			    <div><b>YEAR:</b> <%= content.media[i].year %></div>
+			    <div><b>POSTER:</b> <%= content.media[i].poster %></div>
+			    <div><b>GENDER:</b> <%= content.media[i].gender %></div>
+			    <div><b>TYPE:</b> <%= content.media[i].type %></div>
+			  </li>
+			  <hr>
+			 <% } %>
+			</ul>
+and here
 	    	<div class="moviesList">
 	    		<p>MOVIES AND THUMBNAILS</p><br>
 	    		<p>MOVIES AND THUMBNAILS</p><br>
@@ -35,19 +50,8 @@
 	        <% include ../partials/_cta %>
 
 	        <% include ../partials/_filterable-content %>
-
-			<ul>
-			  <% for(var i=0; i < bla.length; i++) { %>
-			  <li class="quote">
-			    <div><b>TITLE:</b> <%= bla[i].title %></div>
-			    <div><b>YEAR:</b> <%= bla[i].year %></div>
-			    <div><b>POSTER:</b> <%= bla[i].poster %></div>
-			    <div><b>GENDER:</b> <%= bla[i].gender %></div>
-			    <div><b>TYPE:</b> <%= bla[i].type %></div>
-			  </li>
-			  <hr>
-			 <% } %>
-			</ul>
+BOJAAAAN
+			
 		</div>
     </body>
 </html>
