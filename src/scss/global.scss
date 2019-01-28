@@ -55,12 +55,13 @@ body{
 	.moviesContainer{
 	    margin-left: auto;
 	    margin-right: auto;
-	    padding: 15px 0;
+	    padding: 0 0;
 	    width: 1024px;
+	    border: 1px solid #F0F0F0;
 	    .movieContainer{
 	    	display: inline-block;
-	    	max-width: 30%;
-	    	padding: 5px;
+	    	max-width: 33%;
+	    	padding: 15px;
 	    	vertical-align: top;
 	    	z-index: 1;
 	    	position: relative;

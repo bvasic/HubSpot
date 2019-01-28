@@ -41,3 +41,15 @@ server.get('/',function(req,res){
         res.render(__dirname+'/../views/pages/index.ejs',{ content: content });
     }); 
 });
+
+//API FOR jQuery filtering
+server.get('/jsonData',function(req,res){
+    console.log("get jsonData request sent");
+    jsonfile.readFile(file, function read(err, data) {
+        if (err) {
+            throw err;
+        }
+        var content = data;
+        res.send(content);
+    }); 
+});

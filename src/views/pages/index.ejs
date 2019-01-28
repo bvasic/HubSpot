@@ -7,19 +7,27 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/global.css" />
-
     </head>
     <body>
+    	<div id="testType">test</div>
     	<div class="contentHolder">
 	    	<div class="header">
 	    		<% include ../partials/_header %>
 	    	</div>
 	    	
 	    	<div class="moviesList">
+	    		<% include ../partials/_filterable-content %>
+	    		<form action="/" id="searchForm">
+				  <input type="text" name="s" placeholder="Search...">
+				  <input type="submit" value="Search">
+				</form>
+				<!-- the result of the search will be rendered inside this div -->
+				<div id="result"></div>
+
 		    	<div class="moviesContainer">
 					  <% for(var i=0; i < content.media.length; i++) {  %>
 						  <div class="movieContainer">
-						    <img src="<%= content.media[i].poster %>" alt="Snow" style="width:100%">
+						    <img src="<%= content.media[i].poster %>" style="width:100%">
 						    <div><%= content.media[i].title + " (" + content.media[i].year + " )" %></div>
 					    	<div><b>Genres:</b> <%= content.media[i].genre %></div>
 					    	<div><b>TYPE(used for filtering):</b> <%= content.media[i].type %></div>
@@ -39,14 +47,10 @@
 							disrupt kinfolk goth +1.</p>
 						<span>Indiana Jones, Archaeologist</span>
 					</div>
-					<a>Tell Me More</a>
+					<% include ../partials/_cta %>
 				</div>
-			</div>
-
-	        <% include ../partials/_cta %>
-
-	        <% include ../partials/_filterable-content %>
-			
+			</div>			
 		</div>
+		<script type="text/javascript" src="../js/global.js"></script>
     </body>
 </html>
