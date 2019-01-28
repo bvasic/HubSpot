@@ -8,12 +8,6 @@ var jsonfile = require('jsonfile');
 var fs = require('fs');
 var path = require('path');
 var file = './data/data.json';
-// jsonfile.readFile(file, function(err,obj){
-//     console.log(obj);
-// });
-
-// Define to JSON type
-// var jsonContent = JSON.parse(file);
 
 server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
@@ -25,7 +19,7 @@ server.set('view engine', 'ejs');
 
 server.use(express.static(path.resolve('/../bundle/')));
 
-
+// RUN HTTP SERVER ON PORT 7777
 server.listen(port, function(){
     console.log("Server running on port "+port);
     });
@@ -42,7 +36,7 @@ server.get('/',function(req,res){
     }); 
 });
 
-//API FOR jQuery filtering
+//API GET FOR jQuery filtering
 server.get('/jsonData',function(req,res){
     console.log("get jsonData request sent");
     jsonfile.readFile(file, function read(err, data) {

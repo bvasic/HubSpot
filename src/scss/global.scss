@@ -1,5 +1,5 @@
 /* Bojan Vasic for Hubspot 23.01.2019 */
-$headerBorders: #434343;
+@import 'colors.scss';
 
 body{
 	background: #ffffff;
@@ -36,36 +36,43 @@ body{
 		.moviesList{
 			    margin-left: auto;
 			    margin-right: auto;
+			    margin-top:25px;
+			    margin-bottom:25px;
 			    padding: 0 0;
 			    width: 1024px;
 			    border: 1px solid #F0F0F0;
 			    .filterBar{
 			    	border-top: 2px solid #F0F0F0;
 			    	border-bottom: 2px solid #F0F0F0;
-			    	padding:10px 0;
+			    	padding:10px;
 			    	.clearFilters{
 				    	float:right;
 				    	padding-right: 10px;
 				    }
+				    a{
+				    	font-weight: bold;
+				    	color:#000000;
+				    }
 			    }
 			    
 		}
-		.footer {
-			background:#00A2E0;
-			border-top:2px solid $headerBorders;
-			border-bottom:2px solid $headerBorders;
+		.randomJoke {
 				.headerTitle{
-					margin-left:auto;
-					margin-right: auto;
+					background:#00A2E0;
+					border-top:2px solid $headerBorders;
+					border-bottom:2px solid $headerBorders;
+					margin-bottom: 20px;
 					padding:15px 0;
-					width:1024px;
 					display: block;
 					color: #ffffff;
 					vertical-align: center;
 					font-weight: bold;
 					font-size:18px;
 						.centeredTitle{
+							width:1024px;
 							height:25px;
+							margin-left:auto;
+							margin-right: auto;
 						}
 				}
 	}
@@ -94,10 +101,54 @@ body{
 	.testimonialBlock{
 	    margin-left: auto;
 	    margin-right: auto;
-	    padding: 15px 0;
+	    margin-bottom: 20px;
+	    padding: 15px 15px;
 	    width: 1024px;
+	    background: #F9F8F7;
+	    .testimonialLeftContainer{
+	    	display: inline-block;
+	    	width:60%;
+	    }
+	    .testimonialRightContainer{
+	    	display: inline-block;
+	    	width:35%;
+	    	text-align: center;
+	    }
+	    	button {
+		    display: inline-block;
+		    border: none;
+		    padding: 1rem 2rem;
+		    margin: 0;
+		    text-decoration: none;
+		    background: #0069ed;
+		    color: #ffffff;
+		    font-family: sans-serif;
+		    font-size: 1rem;
+		    cursor: pointer;
+		    text-align: center;
+		    transition: background 250ms ease-in-out, 
+		                transform 150ms ease;
+		    -webkit-appearance: none;
+		    -moz-appearance: none;
+		}
+
+		button:hover,
+		button:focus {
+		    background: #0053ba;
+		}
+
+		button:focus {
+		    outline: 1px solid #fff;
+		    outline-offset: -4px;
+		}
+
+		button:active {
+		    transform: scale(0.99);
+		}
 	}
 }
+
+/* GENERIC CSS */
 
 * {
   box-sizing: border-box;
@@ -116,22 +167,71 @@ body{
 
 .dropdown {
   position: relative;
+  background: $dropdownButton;
+  border-bottom: 2px solid $dropdownBorder;
   display: inline-block;
   z-index: 999;
   cursor: pointer;
+  padding:10px 20px;
+  .dropdownDecor{
+  	i {
+	  border: solid $dropdownArrows;
+	  border-width: 0 3px 3px 0;
+	  display: inline-block;
+	  padding: 3px;
+      margin-left: 30px;
+	}
+	.down {
+	  transform: rotate(45deg);
+	  -webkit-transform: rotate(45deg);
+	}
+  }
   .searchBar{
   	float:right;
   }
 }
 
+%arrow {
+	  &:before {
+	    position: absolute;
+	    content: "";
+	    display:block;
+	    width:0;
+	    height:0;
+	    left:50%;
+	    margin-left: -55px;
+	    margin-top:-$arrow-size*2;
+	    border: $arrow-size solid transparent;
+	    border-bottom: $arrow-size solid $dropdownBorder;
+	  }
+	}	
+
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 99;
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	z-index: 99;
+	margin-left: -20px;
+	margin-top: 12px;
+	border:1px solid $dropdownBorder;
+  	@extend %arrow;
+
+	  .menuItem{
+	  	cursor: pointer;
+	  	border-bottom: 1px solid $dropdownBorder;
+	  	margin:0;
+	  	span{
+	    	margin: 10px 10px 10px 10px;
+		    display: block;
+	  		input{
+		  		cursor: pointer;
+		  	}
+		  	label{
+		  		cursor: pointer;
+		  	}
+	  	}
+	  }
 }
 
 .dropdown:hover .dropdown-content {
@@ -145,4 +245,8 @@ body{
 
 .searchBar{
 	float:right;
+}
+
+.mousePointer{
+	cursor:pointer;
 }

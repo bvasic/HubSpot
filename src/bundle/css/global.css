@@ -29,32 +29,37 @@ body {
   .contentHolder .moviesList {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
     padding: 0 0;
     width: 1024px;
     border: 1px solid #F0F0F0; }
     .contentHolder .moviesList .filterBar {
       border-top: 2px solid #F0F0F0;
       border-bottom: 2px solid #F0F0F0;
-      padding: 10px 0; }
+      padding: 10px; }
       .contentHolder .moviesList .filterBar .clearFilters {
         float: right;
         padding-right: 10px; }
-  .contentHolder .footer {
+      .contentHolder .moviesList .filterBar a {
+        font-weight: bold;
+        color: #000000; }
+  .contentHolder .randomJoke .headerTitle {
     background: #00A2E0;
     border-top: 2px solid #434343;
-    border-bottom: 2px solid #434343; }
-    .contentHolder .footer .headerTitle {
-      margin-left: auto;
-      margin-right: auto;
-      padding: 15px 0;
+    border-bottom: 2px solid #434343;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    display: block;
+    color: #ffffff;
+    vertical-align: center;
+    font-weight: bold;
+    font-size: 18px; }
+    .contentHolder .randomJoke .headerTitle .centeredTitle {
       width: 1024px;
-      display: block;
-      color: #ffffff;
-      vertical-align: center;
-      font-weight: bold;
-      font-size: 18px; }
-      .contentHolder .footer .headerTitle .centeredTitle {
-        height: 25px; }
+      height: 25px;
+      margin-left: auto;
+      margin-right: auto; }
   .contentHolder .moviesContainer {
     margin-left: auto;
     margin-right: auto;
@@ -76,9 +81,42 @@ body {
   .contentHolder .testimonialBlock {
     margin-left: auto;
     margin-right: auto;
-    padding: 15px 0;
-    width: 1024px; }
+    margin-bottom: 20px;
+    padding: 15px 15px;
+    width: 1024px;
+    background: #F9F8F7; }
+    .contentHolder .testimonialBlock .testimonialLeftContainer {
+      display: inline-block;
+      width: 60%; }
+    .contentHolder .testimonialBlock .testimonialRightContainer {
+      display: inline-block;
+      width: 35%;
+      text-align: center; }
+    .contentHolder .testimonialBlock button {
+      display: inline-block;
+      border: none;
+      padding: 1rem 2rem;
+      margin: 0;
+      text-decoration: none;
+      background: #0069ed;
+      color: #ffffff;
+      font-family: sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+      transition: background 250ms ease-in-out,  transform 150ms ease;
+      -webkit-appearance: none;
+      -moz-appearance: none; }
+    .contentHolder .testimonialBlock button:hover,
+    .contentHolder .testimonialBlock button:focus {
+      background: #0053ba; }
+    .contentHolder .testimonialBlock button:focus {
+      outline: 1px solid #fff;
+      outline-offset: -4px; }
+    .contentHolder .testimonialBlock button:active {
+      transform: scale(0.99); }
 
+/* GENERIC CSS */
 * {
   box-sizing: border-box; }
 
@@ -93,20 +131,56 @@ body {
 
 .dropdown {
   position: relative;
+  background: #f9f9f9;
+  border-bottom: 2px solid #e1e1e1;
   display: inline-block;
   z-index: 999;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 10px 20px; }
+  .dropdown .dropdownDecor i {
+    border: solid #b0aea7;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 30px; }
+  .dropdown .dropdownDecor .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg); }
   .dropdown .searchBar {
     float: right; }
+
+.dropdown-content:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  left: 50%;
+  margin-left: -55px;
+  margin-top: -20px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #e1e1e1; }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
-  z-index: 99; }
+  z-index: 99;
+  margin-left: -20px;
+  margin-top: 12px;
+  border: 1px solid #e1e1e1; }
+  .dropdown-content .menuItem {
+    cursor: pointer;
+    border-bottom: 1px solid #e1e1e1;
+    margin: 0; }
+    .dropdown-content .menuItem span {
+      margin: 10px 10px 10px 10px;
+      display: block; }
+      .dropdown-content .menuItem span input {
+        cursor: pointer; }
+      .dropdown-content .menuItem span label {
+        cursor: pointer; }
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -117,3 +191,6 @@ body {
 
 .searchBar {
   float: right; }
+
+.mousePointer {
+  cursor: pointer; }

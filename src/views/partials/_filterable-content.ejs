@@ -4,19 +4,53 @@
 			<div>
 				<div class="topFilterBar">
 					<div class="dropdown">
-					  <span>GENRE</span>
+					  <span class="dropdownDecor">GENRE<i class="arrow down"></i></span>
 					  <div class="dropdown-content">
-					  <p>COMEDY</p>
-					  <p>WESTERN</p>
-					  <p>ADVENTURE</p>
+						  <p class="menuItem">
+						  	<span>
+						  		<input type="checkbox" name="action" value="action" id="action"><label for="action">ACTION</label>
+						  	</span>
+						  </p>
+						  <p class="menuItem">
+						  	<span>
+						  		<input type="checkbox" name="adventure" value="adventure" id="adventure"><label for="adventure">ADVENTURE</label>
+						  	</span>
+						  </p>
+						  <p class="menuItem">
+						  	<span>
+						  		<input type="checkbox" name="animation" value="animation" id="animation"><label for="animation">ANIMATION</label>
+						  	</span>
+						  </p>
+						  <p class="menuItem">
+						  	<span>
+						  		<input type="checkbox" name="comedy" value="comedy" id="comedy"><label for="comedy">COMEDY</label>
+						  	</span>
+						  </p>
 					  </div>
 					</div>
 					<div class="dropdown">
-					  <span>YEAR</span>
+					  <span class="dropdownDecor">YEAR<i class="arrow down"></i></span>
 					  <div class="dropdown-content">
-					  <p>2015</p>
-					  <p>2016</p>
-					  <p>2017</p>
+						  <p class="menuItem">
+						  	<span>
+						  		<input type="checkbox" name="1981" value="action" id="1981"><label for="1981">1981</label>
+						  	</span>
+						  </p>
+						  <p class="menuItem">
+						  	<span>
+						  		<input type="checkbox" name="1993" value="adventure" id="1993"><label for="1993">1993</label>
+						  	</span>
+						  </p>
+						  <p class="menuItem">
+						  	<span>
+						  		<input type="checkbox" name="2005" value="comedy" id="2005"><label for="2005">2005</label>
+						  	</span>
+						  </p>
+						  <p class="menuItem">
+						  	<span>
+						  		<input type="checkbox" name="2010" value="animation" id="2010"><label for="2010">2010</label>
+						  	</span>
+						  </p>
 					  </div>
 					</div>
 					<div class="searchBar">
@@ -32,9 +66,9 @@
 				<div>
 					<div class="filterBar">
 						<input type="radio" name="movieOrBook" id="movieRadio">
-						<label>Movies</label>
+						<label for="movieRadio" class="mousePointer">Movies</label>
 						<input type="radio" name="movieOrBook" id="bookRadio">
-						<label>Books</label>
+						<label for="bookRadio" class="mousePointer">Books</label>
 						<span class="clearFilters">
 							<a href="#" id="#clearFilters">CLEAR FILTERS</a>
 						</span>

@@ -24,21 +24,24 @@ var json = (function () {
 	});
 	$.each( json.media, function( key, value ) {
 
+	//#########################################################################
+	//FILTERING MOVIES BY TYPE
+	//#########################################################################
+
 	//FILTERING BOOKS
 	  if(value.type=="book"){
 	  	var title = value.title;
 	  	var poster = value.poster;
 	  	var genre = value.genre;
 	  	var type = value.type;
-
 	  	//RADIO BUTTON FOR BOOKS
 	  	$('#bookRadio').click(function(){
             if($(this).prop("checked") == true){            	
-            	var movieTitle = title;
-            	var moviePoster = poster;
-            	var movieGenre = genre;
-            	var movieType = type;
-            	var newContainer = '<div class="movieContainer"><img src="'+moviePoster+'" style="width:100%"><div>'+movieTitle+'</div><div><b>Genres:</b>'+movieGenre+'</div><div><b>TYPE(used for filtering):</b>'+movieType+'</div></div>';
+            	var bookTitle = title;
+            	var bookPoster = poster;
+            	var bookGenre = genre;
+            	var bookType = type;
+            	var newContainer = '<div class="movieContainer"><img src="'+bookPoster+'" style="width:100%"><div>'+bookTitle+'</div><div><b>Genres:</b>'+bookGenre+'</div><div><b>TYPE(used for filtering):</b>'+bookType+'</div></div>';
             	$(".moviesContainer").append(newContainer);
             }
             else if($(this).prop("checked") == false){
@@ -49,12 +52,10 @@ var json = (function () {
 
 	  //FILTERING MOVIES
 	  if(value.type=="movie"){
-	  	// $('#testType').append(value.title);
 	  	var title = value.title;
 	  	var poster = value.poster;
 	  	var genre = value.genre;
 	  	var type = value.type;
-
 	  	//RADIO BUTTON FOR BOOKS
 	  	$('#movieRadio').click(function(){
             if($(this).prop("checked") == true){            	
@@ -71,11 +72,52 @@ var json = (function () {
         });
 	  } 
 
+  	//#########################################################################
+	//FILTERING MOVIES BY GENRE
+	//#########################################################################
+	
+	if(value.genre=="action"){
+	  	var title = value.title;
+	  	var poster = value.poster;
+	  	var genre = value.genre;
+	  	var type = value.type;
+	  	//RADIO BUTTON FOR BOOKS
+	  	$('#action').change(function(){
+            if(this.checked) {            	
+            	var movieTitle = title;
+            	var moviePoster = poster;
+            	var movieGenre = genre;
+            	var movieType = type;
+            	var newContainer = '<div class="movieContainer"><img src="'+moviePoster+'" style="width:100%"><div>'+movieTitle+'</div><div><b>Genres:</b>'+movieGenre+'</div><div><b>TYPE(used for filtering):</b>'+movieType+'</div></div>';
+            	$(".moviesContainer").append(newContainer);
+            }
+            else if($(this).prop("checked") == false){
+                alert("Checkbox is unchecked.");
+            }
+        });
+	  } 
+
+	  $(".checkbox").change(function() {
+		    if(this.checked) {
+		        //Do stuff
+		    }
+		});
+	  //#########################################################################
+	  //END FILTERING MOVIES BY GENRE
+	  //#########################################################################
+
+
 	 });
+
+
+
 
 	//CLEAR FILTERS
 	$('.clearFilters').click(function(){
 		$(".moviesContainer").empty();
+		$('#movieRadio').prop('checked', false); 
+	  	$('#bookRadio').prop('checked', false); 
+	  	
 		$.each( json.media, function( key, value ) {
 
 	  	var title = value.title;
@@ -104,8 +146,8 @@ var json = (function () {
 			    });
 			    return quotes.value.joke;
 			})(); 
-		$('.randomJoke').empty();
-		$('.randomJoke').append(quotes);
+		$('.testimonialLeftContainer').empty();
+		$('.testimonialLeftContainer').append(quotes);
 	});
 
 });
