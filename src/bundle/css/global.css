@@ -262,7 +262,9 @@ body {
         margin-right: auto;
         padding: 0 0;
         width: 1024px;
-        border: 1px solid #F0F0F0; }
+        border: 1px solid #F0F0F0;
+        position: relative;
+        }
         body .contentHolder .moviesContainer .movieContainer {
           display: block;
           max-width: auto;
@@ -270,6 +272,9 @@ body {
           vertical-align: top;
           z-index: 1;
           position: relative; }
+          body .contentHolder .moviesContainer .movieContainer .responsive {
+            max-width: 100%;
+            height: auto; }
           body .contentHolder .moviesContainer .movieContainer .movieImage {
             width: 100%; }
             body .contentHolder .moviesContainer .movieContainer .movieImage .imgResponsive {

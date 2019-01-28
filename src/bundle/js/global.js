@@ -34,6 +34,7 @@ var json = (function () {
 	  	var poster = value.poster;
 	  	var genre = value.genre;
 	  	var type = value.type;
+	  	var year = value.year;
 	  	//RADIO BUTTON FOR BOOKS
 	  	$('#bookRadio').click(function(){
             if($(this).prop("checked") == true){            	
@@ -41,7 +42,8 @@ var json = (function () {
             	var bookPoster = poster;
             	var bookGenre = genre;
             	var bookType = type;
-            	var newContainer = '<div class="movieContainer"><img src="'+bookPoster+'" style="width:100%"><div>'+bookTitle+'</div><div><b>Genres:</b>'+bookGenre+'</div><div><b>TYPE(used for filtering):</b>'+bookType+'</div></div>';
+            	var bookYear = year;
+            	var newContainer = '<div class="movieContainer"><img src="'+bookPoster+'" style="width:100%"><div><b>'+bookTitle+'</b> <b>('+bookYear+')</b></div><div><b>Genres: </b>'+bookGenre+'</div></div>';
             	$(".moviesContainer").append(newContainer);
             }
             else if($(this).prop("checked") == false){
@@ -56,6 +58,7 @@ var json = (function () {
 	  	var poster = value.poster;
 	  	var genre = value.genre;
 	  	var type = value.type;
+	  	var year = value.year;
 	  	//RADIO BUTTON FOR BOOKS
 	  	$('#movieRadio').click(function(){
             if($(this).prop("checked") == true){            	
@@ -63,7 +66,8 @@ var json = (function () {
             	var moviePoster = poster;
             	var movieGenre = genre;
             	var movieType = type;
-            	var newContainer = '<div class="movieContainer"><img src="'+moviePoster+'" style="width:100%"><div>'+movieTitle+'</div><div><b>Genres:</b>'+movieGenre+'</div><div><b>TYPE(used for filtering):</b>'+movieType+'</div></div>';
+            	var movieYear = year;
+            	var newContainer = '<div class="movieContainer"><img src="'+moviePoster+'" style="width:100%"><div><b>'+movieTitle+'</b> <b>('+movieYear+')</b></div><div><b>Genres: </b>'+movieGenre+'</div></div>';
             	$(".moviesContainer").append(newContainer);
             }
             else if($(this).prop("checked") == false){

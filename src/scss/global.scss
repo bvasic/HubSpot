@@ -350,6 +350,8 @@ body{
 	    padding: 0 0;
 	    width: 1024px;
 	    border: 1px solid #F0F0F0;
+	    position: relative;
+	    
 	    .movieContainer{
 	    	display: block;
 	    	max-width: auto;
@@ -357,6 +359,10 @@ body{
 	    	vertical-align: top;
 	    	z-index: 1;
 	    	position: relative;
+	    	.responsive{
+		    	max-width: 100%;
+	  			height: auto;
+		    }
 	    	.movieImage {
 	    		width: 100%;
 	    		.imgResponsive{

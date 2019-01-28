@@ -8,6 +8,7 @@
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/global.css" />
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <title>HubSpot technical test</title>
     </head>
     <body>
     	<div class="contentHolder">
@@ -20,13 +21,14 @@
 		    	<div class="moviesContainer">
 					  <% for(var i=0; i < content.media.length; i++) {  %>
 						  <div class="movieContainer">
-						    <img src="<%= content.media[i].poster %>" class="responsive">
+						    <img src="<%= content.media[i].poster %>" class="responsive"/>
 						    <div><b><%= content.media[i].title + " (" + content.media[i].year + " )" %></b></div>
 					    	<div><b>Genres: <%= content.media[i].genre %></b></div>
 					    	<!-- <div><b>TYPE(used for filtering): <%= content.media[i].type %></b></div> -->
 						  </div>
 					 <% } %>
 		    	</div>
+		    	
 	    	</div>
 	        <div>
 	        	<div class="randomJoke"><% include ../partials/_testimonial %></div>
