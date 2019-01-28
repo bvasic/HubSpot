@@ -33,6 +33,15 @@ I would also like to learn more and become more proficient in Angular because of
 ## Is there anything else you'd like to let us know?
 
 _your answer here_
+I had some issues while configuring gulp and webpack so I focused on app functionality and manually adding dependencies,
+but at the time being while I already sent code and live link to Ashley, Im troubleshooting it and doing my best to integrate it in solution. I will be happy if I can send you with gulp or webpack at later stage if that is ok with you.
+Thank you.
+
+I recommend using pm2 process manager for running an app with --watch attribute.
+
+Thank you very much for your time and consideration.
+
+Looking forward to your feedback.
 
 Kind regards,
 Bojan Vasic
