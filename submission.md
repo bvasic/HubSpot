@@ -4,21 +4,21 @@ These notes will be read by HubSpot developers. Drop us a line!
 
 Technologies that I will be using in the project are as following:
 
-1. TECHNOLOGIES USED:
+1. TECHNOLOGIES USED:<br>
 	#NodeJS v11.7.0 LTS<br>
-	#HTML 5
-	#Sass precompiler
-	#jQuery library
-	#PM2 process manager for NodeJS
-
-2. VPS cloud instance running:
-	#Ubuntu 18.04 Server
-	#NodeJS v11.7.0 LTS
-	#Nginx 1.14.0
-	#PM2 process manager for NodeJS
-	#Sass precompiler
-
-Application link: http://vps621397.ovh.net
+	#HTML 5<br>
+	#Sass precompiler<br>
+	#jQuery library<br>
+	#PM2 process manager for NodeJS<br>
+<br>
+2. VPS cloud instance running:<br>
+	#Ubuntu 18.04 Server<br>
+	#NodeJS v11.7.0 LTS<br>
+	#Nginx 1.14.0<br>
+	#PM2 process manager for NodeJS<br>
+	#Sass precompiler<br>
+<br>
+Application link: http://vps621397.ovh.net<br>
 
 ## Given more time, what would you have done differently?
 
