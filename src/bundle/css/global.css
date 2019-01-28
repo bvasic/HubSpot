@@ -74,6 +74,8 @@ body {
         vertical-align: top;
         z-index: 1;
         position: relative; }
+        body .contentHolder .moviesContainer .movieContainer img {
+          width: 100%; }
         body .contentHolder .moviesContainer .movieContainer .movieImage {
           width: 100%; }
           body .contentHolder .moviesContainer .movieContainer .movieImage .imgResponsive {
@@ -245,7 +247,7 @@ body {
         background: #00A2E0;
         border-top: 2px solid #434343;
         border-bottom: 2px solid #434343;
-        margin-bottom: 20px;
+        margin-bottom: 0;
         padding: 15px 0;
         display: block;
         color: #ffffff;

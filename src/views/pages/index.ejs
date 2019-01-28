@@ -20,7 +20,7 @@
 		    	<div class="moviesContainer">
 					  <% for(var i=0; i < content.media.length; i++) {  %>
 						  <div class="movieContainer">
-						    <img src="<%= content.media[i].poster %>" style="width:100%">
+						    <img src="<%= content.media[i].poster %>" class="responsive">
 						    <div><b><%= content.media[i].title + " (" + content.media[i].year + " )" %></b></div>
 					    	<div><b>Genres: <%= content.media[i].genre %></b></div>
 					    	<!-- <div><b>TYPE(used for filtering): <%= content.media[i].type %></b></div> -->
