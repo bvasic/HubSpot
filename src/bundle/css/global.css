@@ -26,6 +26,19 @@ body {
       font-size: 18px; }
       .contentHolder .header .headerTitle .centeredTitle {
         height: 25px; }
+  .contentHolder .moviesList {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0;
+    width: 1024px;
+    border: 1px solid #F0F0F0; }
+    .contentHolder .moviesList .filterBar {
+      border-top: 2px solid #F0F0F0;
+      border-bottom: 2px solid #F0F0F0;
+      padding: 10px 0; }
+      .contentHolder .moviesList .filterBar .clearFilters {
+        float: right;
+        padding-right: 10px; }
   .contentHolder .footer {
     background: #00A2E0;
     border-top: 2px solid #434343;
@@ -77,3 +90,30 @@ body {
   display: inline-block;
   padding: 5px;
   max-width: 31%; }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 999;
+  cursor: pointer; }
+  .dropdown .searchBar {
+    float: right; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 99; }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer; }
+
+.topFilterBar {
+  padding: 10px; }
+
+.searchBar {
+  float: right; }

@@ -23,6 +23,8 @@ var json = (function () {
 		$(".moviesContainer").empty();
 	});
 	$.each( json.media, function( key, value ) {
+
+	//FILTERING BOOKS
 	  if(value.type=="book"){
 	  	var title = value.title;
 	  	var poster = value.poster;
@@ -45,6 +47,7 @@ var json = (function () {
         });
 	  } 
 
+	  //FILTERING MOVIES
 	  if(value.type=="movie"){
 	  	// $('#testType').append(value.title);
 	  	var title = value.title;
@@ -70,6 +73,39 @@ var json = (function () {
 
 	 });
 
+	//CLEAR FILTERS
+	$('.clearFilters').click(function(){
+		$(".moviesContainer").empty();
+		$.each( json.media, function( key, value ) {
 
+	  	var title = value.title;
+	  	var poster = value.poster;
+	  	var genre = value.genre;
+	  	var type = value.type;
+
+    	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div>'+title+'</div><div><b>Genres:</b>'+genre+'</div><div><b>TYPE(used for filtering):</b>'+type+'</div></div>';
+    	$(".moviesContainer").append(newContainer);
+
+        });
+	  });
+
+	//TESTIMONIALS RANDOM API QUOTES
+	$('#randomQuote').click(function(){
+		var quotes = (function () {
+	    var quotes = null;
+		    $.ajax({
+			        'async': false,
+			        'global': false,
+			        'url': "http://api.icndb.com/jokes/random",
+			        'dataType': "json",
+			        'success': function (data) {
+			            quotes = data;
+			        }
+			    });
+			    return quotes.value.joke;
+			})(); 
+		$('.randomJoke').empty();
+		$('.randomJoke').append(quotes);
+	});
 
 });
