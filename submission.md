@@ -35,7 +35,7 @@ INSTRUCTIONS FOR RUNNING AN APP:
 ## Given more time, what would you have done differently?
 
 _your answer here_
-1. In that case I would use ReactJS and I would use some UI framework to get responsiveness faster and nicer than in pure css and to make look and feel properly for all possible devices and orientation, I would also use database API instead of fixed json file.
+1. In that case I would use ReactJS or other javascript framework and I would use some UI framework to get responsiveness faster and nicer than in pure css and to make look and feel properly for all possible devices and orientation, I would also use database API instead of fixed json file. Also if I had more time I would refactor frontend javascript code for performance reasons.
 I would also like to learn more and become more proficient in Angular because of realtime data binding which is very usefull for single page applications.
 2. For dropdown menu where are categories for "Genre" and "Year" I would like to do it dynamic from the json categories provided so that its not only 4 of them harcoded if I was given more time
 3. I would also include search input[text] based on keywords of genre, titles, or year published, and make better user experience for results based on multiple selections
