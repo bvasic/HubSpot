@@ -71,53 +71,149 @@ var json = (function () {
             }
         });
 	  } 
-
-  	//#########################################################################
-	//FILTERING MOVIES BY GENRE
-	//#########################################################################
-	
-	if(value.genre=="action"){
-	  	var title = value.title;
-	  	var poster = value.poster;
-	  	var genre = value.genre;
-	  	var type = value.type;
-	  	//RADIO BUTTON FOR BOOKS
-	  	$('#action').change(function(){
-            if(this.checked) {            	
-            	var movieTitle = title;
-            	var moviePoster = poster;
-            	var movieGenre = genre;
-            	var movieType = type;
-            	var newContainer = '<div class="movieContainer"><img src="'+moviePoster+'" style="width:100%"><div>'+movieTitle+'</div><div><b>Genres:</b>'+movieGenre+'</div><div><b>TYPE(used for filtering):</b>'+movieType+'</div></div>';
-            	$(".moviesContainer").append(newContainer);
-            }
-            else if($(this).prop("checked") == false){
-                alert("Checkbox is unchecked.");
-            }
-        });
-	  } 
-
-	  $(".checkbox").change(function() {
-		    if(this.checked) {
-		        //Do stuff
-		    }
-		});
-	  //#########################################################################
-	  //END FILTERING MOVIES BY GENRE
-	  //#########################################################################
-
-
 	 });
 
 
 
+  	//#########################################################################
+	//FILTERING MOVIES BY GENRE
+	//#########################################################################
+	  	$("#action").click(function() {
+	  		$(".moviesContainer").empty();
+	  		$.each( json.media, function( i, value ) {
+	  			var genreArray = value.genre;
+			  	if(genreArray.includes("action")){
+				  	var title = value.title;
+				  	var poster = value.poster;
+				  	var genre = value.genre;
+				  	var type = value.type;
+				  	var year = value.year;
+	            	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div><b>'+title+" (" + year + " )"+'</b></div><div><b>Genres:</b>'+genre+'</div></div>';
+	            	$(".moviesContainer").append(newContainer);
+		  		}
+	  		});
+        });
+        $("#adventure").click(function() {
+	  		$(".moviesContainer").empty();
+	  		$.each( json.media, function( i, value ) {
+	  			var genreArray = value.genre;
+			  	if(genreArray.includes("adventure")){
+				  	var title = value.title;
+				  	var poster = value.poster;
+				  	var genre = value.genre;
+				  	var type = value.type;
+				  	var year = value.year;
+	            	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div><b>'+title+" (" + year + " )"+'</b></div><div><b>Genres:</b>'+genre+'</div></div>';	            	$(".moviesContainer").append(newContainer);
+		  		}
+	  		});
+        });
+        $("#animation").click(function() {
+	  		$(".moviesContainer").empty();
+	  		$.each( json.media, function( i, value ) {
+	  			var genreArray = value.genre;
+			  	if(genreArray.includes("animation")){
+				  	var title = value.title;
+				  	var poster = value.poster;
+				  	var genre = value.genre;
+				  	var type = value.type;
+				  	var year = value.year;
+	            	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div><b>'+title+" (" + year + " )"+'</b></div><div><b>Genres:</b>'+genre+'</div></div>';
+	            	$(".moviesContainer").append(newContainer);
+		  		}
+	  		});
+        });
+        $("#comedy").click(function() {
+	  		$(".moviesContainer").empty();
+	  		$.each( json.media, function( i, value ) {
+	  			var genreArray = value.genre;
+			  	if(genreArray.includes("comedy")){
+				  	var title = value.title;
+				  	var poster = value.poster;
+				  	var genre = value.genre;
+				  	var type = value.type;
+				  	var year = value.year;
+	            	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div><b>'+title+" (" + year + " )"+'</b></div><div><b>Genres:</b>'+genre+'</div></div>';
+	            	$(".moviesContainer").append(newContainer);
+		  		}
+	  		});
+        });
+	//#########################################################################
+	//END FILTERING MOVIES BY GENRE
+	//#########################################################################
+
+
+	//#########################################################################
+	//FILTERING MOVIES BY YEAR
+	//#########################################################################
+	  	$("#1981").click(function() {
+	  		$(".moviesContainer").empty();
+	  		$.each( json.media, function( i, value ) {
+	  			var yearArray = value.year;
+			  	if(yearArray.includes("1981")){
+				  	var title = value.title;
+				  	var poster = value.poster;
+				  	var genre = value.genre;
+				  	var type = value.type;
+	            	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div><b>'+title+" (" + year + " )"+'</b></div><div><b>Genres:</b>'+genre+'</div><div><b>TYPE(used for filtering):</b>'+type+'</div></div>';
+	            	$(".moviesContainer").append(newContainer);
+		  		}
+	  		});
+        });
+        $("#1993").click(function() {
+	  		$(".moviesContainer").empty();
+	  		$.each( json.media, function( i, value ) {
+	  			var yearArray = value.year;
+			  	if(yearArray.includes("1993")){
+				  	var title = value.title;
+				  	var poster = value.poster;
+				  	var genre = value.genre;
+				  	var type = value.type;
+				  	var year = value.year;
+	            	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div><b>'+title+" (" + year + " )"+'</b></div><div><b>Genres:</b>'+genre+'</div><div><b>TYPE(used for filtering):</b>'+type+'</div></div>';
+	            	$(".moviesContainer").append(newContainer);
+		  		}
+	  		});
+        });
+        $("#2005").click(function() {
+	  		$(".moviesContainer").empty();
+	  		$.each( json.media, function( i, value ) {
+	  			var yearArray = value.year;
+			  	if(yearArray.includes("2005")){
+				  	var title = value.title;
+				  	var poster = value.poster;
+				  	var genre = value.genre;
+				  	var type = value.type;
+	            	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div><b>'+title+" (" + year + " )"+'</b></div><div><b>Genres:</b>'+genre+'</div><div><b>TYPE(used for filtering):</b>'+type+'</div></div>';
+	            	$(".moviesContainer").append(newContainer);
+		  		}
+	  		});
+        });
+        $("#2010").click(function() {
+	  		$(".moviesContainer").empty();
+	  		$.each( json.media, function( i, value ) {
+	  			var yearArray = value.year;
+			  	if(yearArray.includes("2010")){
+				  	var title = value.title;
+				  	var poster = value.poster;
+				  	var genre = value.genre;
+				  	var type = value.type;
+	            	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div><b>'+title+" (" + year + " )"+'</b></div><div><b>Genres:</b>'+genre+'</div><div><b>TYPE(used for filtering):</b>'+type+'</div></div>';
+	            	$(".moviesContainer").append(newContainer);
+		  		}
+	  		});
+        });
+	//#########################################################################
+	//END FILTERING MOVIES BY YEAR
+	//#########################################################################
+
+	 
 
 	//CLEAR FILTERS
 	$('.clearFilters').click(function(){
 		$(".moviesContainer").empty();
 		$('#movieRadio').prop('checked', false); 
 	  	$('#bookRadio').prop('checked', false); 
-	  	
+
 		$.each( json.media, function( key, value ) {
 
 	  	var title = value.title;
@@ -125,7 +221,7 @@ var json = (function () {
 	  	var genre = value.genre;
 	  	var type = value.type;
 
-    	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div>'+title+'</div><div><b>Genres:</b>'+genre+'</div><div><b>TYPE(used for filtering):</b>'+type+'</div></div>';
+    	var newContainer = '<div class="movieContainer"><img src="'+poster+'" style="width:100%"><div><b>'+title+'</b></div><div><b>Genres:</b>'+genre+'</div><div><b>TYPE(used for filtering):</b>'+type+'</div></div>';
     	$(".moviesContainer").append(newContainer);
 
         });

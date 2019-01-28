@@ -8,9 +8,7 @@ body{
 	ul {
 		list-style-type: none;
 	}
-}
-
-.contentHolder {
+	.contentHolder {
 	margin-left:auto;
 	margin-right:auto;
 	height:100px;
@@ -221,9 +219,20 @@ body{
 	  	cursor: pointer;
 	  	border-bottom: 1px solid $dropdownBorder;
 	  	margin:0;
+	  	
+	  	color:black;
+	  	background:white;
+	  	:hover{
+		    	color:black;
+		    	background:#66ccff;
+		    	transition: 0.8s;
+		    };
 	  	span{
 	    	margin: 10px 10px 10px 10px;
 		    display: block;
+		    color:black;
+	  		background:white;
+		    
 	  		input{
 		  		cursor: pointer;
 		  	}
@@ -249,4 +258,220 @@ body{
 
 .mousePointer{
 	cursor:pointer;
+}
+}
+
+
+
+
+
+/* RESPONSIVENESS FOR MOBILE PHONE */
+@media only screen and (max-width: 600px) {
+  @import 'colors.scss';
+
+body{
+	background: #ffffff;
+	margin: 0;
+	font-family: Montserrat;
+	ul {
+		list-style-type: none;
+	}
+	.contentHolder {
+	margin-left:auto;
+	margin-right:auto;
+	height:100px;
+		.header {
+			background:#00A2E0;
+			border-top:2px solid $headerBorders;
+			border-bottom:2px solid $headerBorders;
+				.headerTitle{
+					margin-left:auto;
+					margin-right: auto;
+					padding:15px 0;
+					width:1024px;
+					display: block;
+					color: #ffffff;
+					vertical-align: center;
+					font-weight: bold;
+					font-size:18px;
+						.centeredTitle{
+							height:25px;
+							padding-left:20px;
+						}
+				}
+			}
+		.moviesList{
+			    margin-left: auto;
+			    margin-right: auto;
+			    margin-top:25px;
+			    margin-bottom:25px;
+			    padding: 0 0;
+			    width: 100%;
+			    border: 1px solid #F0F0F0;
+			    .filterBar{
+			    	border-top: 2px solid #F0F0F0;
+			    	border-bottom: 2px solid #F0F0F0;
+			    	padding:10px;
+			    	.clearFilters{
+				    	float:right;
+				    	padding-right: 10px;
+				    }
+				    a{
+				    	font-weight: bold;
+				    	color:#000000;
+				    }
+			    }
+			    
+		}
+		.randomJoke {
+				.headerTitle{
+					background:#00A2E0;
+					border-top:2px solid $headerBorders;
+					border-bottom:2px solid $headerBorders;
+					margin-bottom: 20px;
+					padding:15px 0;
+					display: block;
+					color: #ffffff;
+					vertical-align: center;
+					font-weight: bold;
+					font-size:18px;
+						.centeredTitle{
+							height:25px;
+							padding-left:20px;
+						}
+				}
+	}
+	.moviesContainer{
+	    margin-left: auto;
+	    margin-right: auto;
+	    padding: 0 0;
+	    width: 1024px;
+	    border: 1px solid #F0F0F0;
+	    .movieContainer{
+	    	display: block;
+	    	max-width: auto;
+	    	padding: 15px;
+	    	vertical-align: top;
+	    	z-index: 1;
+	    	position: relative;
+	    	.movieImage {
+	    		width: 100%;
+	    		.imgResponsive{
+	    			width: 300px;
+    				height: auto;
+	    		}
+	    	}
+	    }
+	}
+	.testimonialBlock{
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-bottom: 20px;
+	    padding: 15px 15px;
+	    width: 100%;
+	    background: #F9F8F7;
+	    .testimonialLeftContainer{
+	    	display: block;
+	    	width:100%;
+	    }
+	    .testimonialRightContainer{
+	    	    display: block;
+			    text-align: center;
+			    width: 100%;
+	    }
+	    	button {
+		    display: inline-block;
+		    border: none;
+		    padding: 1rem 2rem;
+		    margin: 0;
+		    text-decoration: none;
+		    background: #0069ed;
+		    color: #ffffff;
+		    font-family: sans-serif;
+		    font-size: 1rem;
+		    cursor: pointer;
+		    text-align: center;
+		    transition: background 250ms ease-in-out, 
+		                transform 150ms ease;
+		    -webkit-appearance: none;
+		    -moz-appearance: none;
+		}
+
+		button:hover,
+		button:focus {
+		    background: #0053ba;
+		}
+
+		button:focus {
+		    outline: 1px solid #fff;
+		    outline-offset: -4px;
+		}
+
+		button:active {
+		    transform: scale(0.99);
+		}
+	}
+}
+
+/* GENERIC CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    display: inline-block;
+    padding: 5px;
+    max-width: 31%;
+}
+
+.dropdown {
+  position: relative;
+  background: $dropdownButton;
+  border-bottom: 2px solid $dropdownBorder;
+  display: inline-block;
+  z-index: 999;
+  cursor: pointer;
+  padding:10px 20px;
+  .dropdownDecor{
+  	i {
+	  border: solid $dropdownArrows;
+	  border-width: 0 3px 3px 0;
+	  display: inline-block;
+	  padding: 3px;
+      margin-left: 30px;
+	}
+	.down {
+	  transform: rotate(45deg);
+	  -webkit-transform: rotate(45deg);
+	}
+  }
+  .searchBar{
+  	float:right;
+  }
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer;
+}
+
+.topFilterBar {
+	padding:10px;
+}
+
+.searchBar{
+	float:right;
+}
+
+.mousePointer{
+	cursor:pointer;
+}
+}
 }
