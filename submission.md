@@ -21,14 +21,25 @@ Technologies that I will be using in the project are as following:
 <br>
 Application link: http://vps621397.ovh.net:7777/<br>
 
+#################################
+INSTRUCTIONS FOR RUNNING AN APP:
+#################################
+1. Backend code is located inside /src/js/index.js
+2. Install pm2 : "npm install pm2 -g"
+3. Update packages defined in package.json with "npm install update"
+4. In shell enter folder "HubSpot/src/js/"
+5. Run command "pm2 start index.js --watch"
+6. Open URL: "localhost:7777" or hosted app on "http://vps621397.ovh.net:7777"
+#################################
+
 ## Given more time, what would you have done differently?
 
 _your answer here_
-1. In that case I would use ReactJS and I would use some UI framework to get responsiveness faster and nicer than in pure css and to make look and feel properly for all possible sizes and orientation, I would also use database API instead of fixed json file.
+1. In that case I would use ReactJS and I would use some UI framework to get responsiveness faster and nicer than in pure css and to make look and feel properly for all possible devices and orientation, I would also use database API instead of fixed json file.
 I would also like to learn more and become more proficient in Angular because of realtime data binding which is very usefull for single page applications.
 2. For dropdown menu where are categories for "Genre" and "Year" I would like to do it dynamic from the json categories provided so that its not only 4 of them harcoded if I was given more time
 3. I would also include search input[text] based on keywords of genre, titles, or year published, and make better user experience for results based on multiple selections
-4. I didn't use gulp or webpack now because I need to learn it better first, so for NodeJS apps im just using manually package.json for dependency modules and manually entering libraries like javascript, css etc..
+4. I didn't use gulp or webpack now (had some issues with npm packages locally) because I need to learn it better first, so for NodeJS apps im just using manually package.json for dependency modules and manually entering libraries like javascript, css etc..
 
 ## Is there anything else you'd like to let us know?
 
@@ -38,6 +49,9 @@ but at the time being while I already sent code and live link to Ashley, Im trou
 Thank you.
 
 I recommend using pm2 process manager for running an app with --watch attribute.
+
+
+
 
 Thank you very much for your time and consideration.
 
