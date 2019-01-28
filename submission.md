@@ -24,8 +24,11 @@ Application link: http://vps621397.ovh.net<br>
 _your answer here_
 1. In that case I would use ReactJS and I would use some UI framework to get responsiveness faster and nicer than in pure css and to make look and feel properly for all possible sizes and orientation, I would also use database API instead of fixed json file.
 2. For dropdown menu where are categories for "Genre" and "Year" I would like to to it dynamic from the json categories provided so that its not only 4 of them harcoded
-3. I would also include search based on keywords of genre, titles, or year published
+3. I would also include search based on keywords of genre, titles, or year published, and make better user experience for results based on multiple selections
 
 ## Is there anything else you'd like to let us know?
 
 _your answer here_
+
+Kind regards,
+Bojan Vasic
