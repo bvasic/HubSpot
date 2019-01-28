@@ -5,7 +5,7 @@ These notes will be read by HubSpot developers. Drop us a line!
 Technologies that I will be using in the project are as following:
 
 1. TECHNOLOGIES USED:
-	#NodeJS v11.7.0 LTS
+	#NodeJS v11.7.0 LTS<br>
 	#HTML 5
 	#Sass precompiler
 	#jQuery library
